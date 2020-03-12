@@ -4,12 +4,48 @@ using UnityEngine;
 
 public class ElementController : MonoBehaviour
 {
-    public bool isFlammable = true;
-    public bool conductsElectricity = true;
-    public bool isMagnetic = true;
-    public bool isSoluble = true;
-    public float mass = 1f;
-    public float volume = 1f;
+    [SerializeField]
+    private bool isFlammable = true;
+    [SerializeField]
+    private bool conductsElectricity = true;
+    [SerializeField]
+    private bool isMagnetic = true;
+    [SerializeField]
+    private bool isSoluble = true;
+    [SerializeField]
+    private float mass = 1f;
+    [SerializeField]
+    private float volume = 1f;
+
+    public bool IsFlammable()
+    {
+        return isFlammable;
+    }
+
+    public bool ConductsElectricity()
+    {
+        return conductsElectricity;
+    }
+
+    public bool IsMagnetic()
+    {
+        return isMagnetic;
+    }
+
+    public bool IsSoluble()
+    {
+        return isSoluble;
+    }
+
+    public float GetMass()
+    {
+        return mass;
+    }
+
+    public float GetVolume()
+    {
+        return volume;
+    }
 
     public float GetDensity()
     {
